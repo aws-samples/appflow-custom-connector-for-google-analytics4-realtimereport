@@ -131,7 +131,6 @@ class ConnectorDemoConfigurationHandler(ConfigurationHandler):
 
 
 class ConnectorDemoRecordHandler(RecordHandler):
-    # TODO
     def retrieve_data(
         self, request: requests.RetrieveDataRequest
     ) -> responses.RetrieveDataResponse:
@@ -139,7 +138,6 @@ class ConnectorDemoRecordHandler(RecordHandler):
         record_list = []
         return responses.RetrieveDataResponse(is_success=True, records=record_list)
 
-    # TODO
     def write_data(
         self, request: requests.WriteDataRequest
     ) -> responses.WriteDataResponse:
