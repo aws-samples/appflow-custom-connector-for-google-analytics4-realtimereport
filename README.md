@@ -2,7 +2,7 @@
 
 ## 概要
 
-本サンプルは Google Analytics 4 (GA4) からニアリアルタイムでデータを送信する AppFlow カスタムコネクタです。日次でのデータ取得については、正式に[サポートしている Google Analytics 4 コネクタ](https://docs.aws.amazon.com/appflow/latest/userguide/connectors-google-analytics-4.html)の活用も合わせて検討ください。
+本サンプルは Google Analytics 4 (GA4) からニアリアルタイムでデータを送信する AppFlow カスタムコネクタです。日次でのデータ取得については、ネイティブに[サポートしている Google Analytics 4 コネクタ](https://docs.aws.amazon.com/appflow/latest/userguide/connectors-google-analytics-4.html)の活用も併せて検討ください。また、Custom Connector SDK を用いた実装についてはこちらの[解説ブログ](https://aws.amazon.com/jp/builders-flash/202302/appflow-custom-connecter-saas-data)も併せてご参照ください。
 
 ## 目次
 
@@ -150,3 +150,11 @@ Custom Connector SDK の仕様について説明します。本サンプルで�
 ### 最大取得行数の制限
 
 取得する行数には 100,000 件の制限があり、dimensions の値を増やすと取得する行数が大幅に増加します。このため、訪問者が多く dimensions も多い場合、この制限に達してしまい正確なデータが取得できない可能性があります。ページネーションなどはサポートされておらず、制限に達する場合は指定する dimensions を減らす必要があります。
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
